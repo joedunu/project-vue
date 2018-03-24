@@ -171,13 +171,13 @@
 </template>
 
 <script>
-    export default {
-        name: "home"
-    }
+export default {
+  name: 'home'
+};
 </script>
 
 <style scoped>
-    .home {
-        text-align: left;
-    }
+.home {
+  text-align: left;
+}
 </style>

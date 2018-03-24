@@ -1,4 +1,7 @@
 # project-vue
+
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 Basic implementation of a single page application using Vue.js.
 
 This project was initiated using vue-cli.
