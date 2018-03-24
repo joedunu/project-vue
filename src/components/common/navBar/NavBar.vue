@@ -1,6 +1,6 @@
 <template>
     <div class='nav-bar'>
-        <img class='logo' src="../../../assets/logo.png" />
+        <img class='logo' src='../../../assets/logo.png' />
         <nav-item label='Home' name='home' to='/home' />
         <nav-item label='About Us' name='about-us' to='/about-us' />
         <nav-item label='Contact Us' name='contact-us' to='/contact-us' />
@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import NavItem from '../navItem/NavItem.vue';
+import NavItem from "../navItem/NavItem.vue";
 
 export default {
-  name: 'nav-bar',
+  name: "nav-bar",
   components: {
     NavItem
   }

@@ -9,9 +9,9 @@ import ContactUs from './components/pages/contactUs/ContactUs.vue'
 Vue.config.productionTip = false;
 
 const routes = [
-    { path: '/home', component: Home },
-    { path: '/about-us', component: AboutUs },
-    { path: '/contact-us', component: ContactUs }
+    {path: '/home', component: Home},
+    {path: '/about-us', component: AboutUs},
+    {path: '/contact-us', component: ContactUs}
 ];
 
 Vue.use(VueRouter)
@@ -23,4 +23,4 @@ const router = new VueRouter({
 new Vue({
     router,
     render: h => h(App)
-}).$mount('#app');
+}).$mount("#app");

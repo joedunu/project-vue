@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  id: 'nav-item',
-  name: 'nav-item',
+  id: "nav-item",
+  name: "nav-item",
   props: {
     label: String,
     to: String

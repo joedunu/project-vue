@@ -1,17 +1,17 @@
 <template>
-    <div class='footer'>
+    <div class='page-footer'>
 
     </div>
 </template>
 
 <script>
 export default {
-  name: 'footer'
+  name: "page-footer"
 };
 </script>
 
 <style scoped>
-.footer {
+.page-footer {
   height: 200px;
   background-color: #f19f4d;
 }
