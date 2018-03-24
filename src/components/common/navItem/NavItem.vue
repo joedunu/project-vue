@@ -1,5 +1,5 @@
 <template>
-    <router-link class='nav-item' v-bind:to='name' v-bind:name='name' v-on:click='goToPage'>
+    <router-link class='nav-item' active-class='active' :to='to'>
         {{label}}
     </router-link>
 </template>
@@ -10,12 +10,7 @@
         name: 'nav-item',
         props: {
             label: String,
-            name: String
-        },
-        methods: {
-            goToPage: function goToPage (e) {
-                console.log('clicked', e.target.name)
-            }
+            to: String
         }
     }
 </script>
@@ -24,17 +19,15 @@
     .nav-item {
         background-color: dodgerblue;
         display: flex;
-        padding: 10px;
+        padding: 10px 20px;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
     }
 
-    button {
-        color: white;
-        border: 0;
-        font-size: 16px;
-        &:active,
-        &:focus {
-            text-decoration: underline;
-            border: none;
-        }
+    .active {
+        text-decoration: underline;
+        font-weight: 600;
     }
 </style>

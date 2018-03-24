@@ -14,11 +14,13 @@ const routes = [
     { path: '/contact-us', component: ContactUs }
 ];
 
+Vue.use(VueRouter)
+
 const router = new VueRouter({
     routes
 });
 
 new Vue({
-  render: h => h(App),
-    router
+    router,
+    render: h => h(App)
 }).$mount('#app');

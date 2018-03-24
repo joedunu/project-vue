@@ -1,8 +1,8 @@
 <template>
     <div class='nav-bar'>
-        <nav-item label='Home' name='home' />
-        <nav-item label='About Us' name='about-us' />
-        <nav-item label='Contact Us' name='contact-us' />
+        <nav-item label='Home' name='home' to='/home' />
+        <nav-item label='About Us' name='about-us' to='/about-us' />
+        <nav-item label='Contact Us' name='contact-us' to='/contact-us' />
     </div>
 </template>
 
