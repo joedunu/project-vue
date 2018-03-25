@@ -6,14 +6,14 @@
 
 <script>
 export default {
-  name: "contact-us"
-};
+	name: "contact-us"
+}
 </script>
 
 <style scoped>
 .contact-us {
-  margin: 0px;
-  height: 2000px;
-  background-color: #d9d9d9;
+	margin: 0px;
+	height: 2000px;
+	background-color: #d9d9d9;
 }
 </style>
