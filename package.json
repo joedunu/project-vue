@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "precommit": "lint-staged",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest && istanbul check-coverage",
     "format": "prettier --write src/**/*.{vue,js}"
   },
   "lint-staged": {

@@ -21,8 +21,8 @@ check:
     global:
         statements: 10
         lines: 10
-        branches: 10
-        functions: 10
+        branches: 90
+        functions: 0
         excludes: []
     each:
         statements: 0
