@@ -5,7 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "precommit": "lint-staged",
+    "test": "NODE_ENV=test jest && istanbul check-coverage",
+    "format": "prettier --write src/**/*.{vue,js}"
+  },
+  "lint-staged": {
+    "*.{vue,js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "vue": "^2.5.16",
@@ -15,12 +24,45 @@
     "@vue/cli-plugin-babel": "^3.0.0-beta.6",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.6",
     "@vue/cli-service": "^3.0.0-beta.6",
-    "vue-template-compiler": "^2.5.13"
+    "@vue/test-utils": "^1.0.0-beta.12",
+    "babel": "^6.23.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-vue-app": "^2.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-vue": "^4.4.0",
+    "husky": "^0.14.3",
+    "istanbul": "^0.4.5",
+    "jest": "^22.4.3",
+    "jest-serializer-vue": "^1.0.0",
+    "jest-vue-preprocessor": "^1.4.0",
+    "lint-staged": "^7.0.0",
+    "prettier": "1.11.1",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.13",
+    "vue-template-es2015-compiler": "^1.6.0",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13"
   },
   "babel": {
-    "presets": [
-      "@vue/app"
-    ]
+    "env": {
+      "dev": {"presets": ["@vue/app"]},
+      "test": {
+        "presets": [
+          ["env", {
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      }
+    }
   },
   "eslintConfig": {
     "root": true,
@@ -38,5 +80,67 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "eslint": {
+    "root": true,
+    "parserOptions": {
+      "sourceType": "module",
+      "parser": "babel-eslint"
+    },
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "extends": [
+      "prettier",
+      "prettier/standard",
+      "plugin:vue/recommended"
+    ],
+    "plugins": [
+      "vue",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "globals": {
+      "expect": true,
+      "describe": true,
+      "test": true
+    }
+  },
+  "prettier": {
+    "useTabs": true,
+    "semi": false,
+    "singleQuote": false
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "spec.js",
+      "/assets/",
+      "/public/",
+      "/coverage/",
+      "/node_modules/",
+      "/dist/"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{js,vue}"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "^vue$": "vue/dist/vue.common.js"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
+    }
+  }
 }
