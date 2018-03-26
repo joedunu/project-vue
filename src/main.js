@@ -9,6 +9,7 @@ import ContactUs from "./components/pages/contactUs/ContactUs"
 Vue.config.productionTip = false
 
 const routes = [
+	{ path: "/", component: Home },
 	{ path: "/home", component: Home },
 	{ path: "/about-us", component: AboutUs },
 	{ path: "/contact-us", component: ContactUs }

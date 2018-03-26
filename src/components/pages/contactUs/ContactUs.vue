@@ -1,12 +1,17 @@
 <template>
     <div class='contact-us'>
-        <h1>Contact Us</h1>
+        <PageTitle title-text="Contact Us"/>
     </div>
 </template>
 
 <script>
+import PageTitle from "../../common/pageTitle/PageTitle"
+
 export default {
-	name: "contact-us"
+	name: "contact-us",
+	components: {
+		PageTitle
+	}
 }
 </script>
 

@@ -1,24 +1,23 @@
 <template>
     <div class="about-us">
-        <h1>About Us</h1>
-        <ResponsiveCarousel />
+        <PageTitle title-text="About Us"/>
     </div>
 </template>
 
 <script>
-    import ResponsiveCarousel from '../../common/responsiveCarousel/ResponsiveCarousel'
+import PageTitle from "../../common/pageTitle/PageTitle"
 
-    export default {
+export default {
 	name: "about-us",
-    components: {
-        ResponsiveCarousel
-    }
+	components: {
+		PageTitle
+	}
 }
 </script>
 
 <style scoped>
-    .about-us {
-        height: 2000px;
-        align-content: center;
-    }
+.about-us {
+	height: 2000px;
+	align-content: center;
+}
 </style>
