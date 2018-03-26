@@ -20,7 +20,6 @@ export default {
 
 <style scoped>
 .nav-item {
-	display: flex;
 	padding: 10px 20px;
 	color: white;
 	font-size: 18px;
