@@ -22,4 +22,14 @@ $yarn serve
 ```
          
 ## Libraries, frameworks and plugins
-  * Vue.js
+
+Library / framework / plugin | Description
+-----------------------------|-----------------------------------
+Vue.js | Reactive front-end framework
+vue-router | Routing framework for Vue.js SPAs
+vue-carousel | Carousel component built in Vue.js
+Babel | JavaScript compiler
+Jest | Test runner
+Prettier / Eslint | Linter / formatter
+istanbul | Code coverage tool
+Webpack | Builder tool 
